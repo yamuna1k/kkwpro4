@@ -1,125 +1,824 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>kkw409 </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="top-header">
-            <a class="memu brand">pro409</a>
-            <a class="memu" href="index.html">งานพรอม</a>
-            <a class="memu" href="t2.html">one day</a>
-            <a class="memu" href="t3.html">9</a>
-        </header>
-        <div class="r"></div>
-        <div class="main-content">
-
-            <div class="as">
-                <img class="image" src="img/e4.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e2.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e3.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e5.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e6.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e7.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-
-             <div class="as">
-                <img class="image" src="img/e9.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             
-             <div class="as">
-                <img class="image" src="img/e8.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e14.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e10.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e11.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e12.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e13.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e15.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e16.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e17.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
-             <div class="as">
-                <img class="image" src="img/e18.jpg">
-                <h2></h2>
-                <p></p>
-             </div>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocktailMaster Pro - เครื่องชงค็อกเทลอัตโนมัติ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Kanit', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .cocktail-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .active-tab {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .machine-rotate {
+            animation: rotate360 20s linear infinite;
+        }
+        
+        @keyframes rotate360 {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">🍸</span>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800">CocktailMaster Pro</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 font-medium">หน้าแรก</a>
+                    <a href="#product" class="nav-link text-gray-700 hover:text-purple-600 font-medium">รายละเอียดสินค้า</a>
+                    <a href="#menu" class="nav-link text-gray-700 hover:text-purple-600 font-medium">เมนูเครื่องดื่ม</a>
+                    <a href="#control" class="nav-link text-gray-700 hover:text-purple-600 font-medium">ควบคุมเครื่อง</a>
+                    <a href="#support" class="nav-link text-gray-700 hover:text-purple-600 font-medium">ช่วยเหลือ</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">เข้าสู่ระบบ</button>
+                    <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">☰</button>
+                </div>
+            </div>
         </div>
-        <footer class="bottom-footer">
-            <p>เหงามาก</p>
-            <p>ไม่จริงอะจริงๆว่าง</p>
-        </footer>
-    </body>
-    <style></style>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700">หน้าแรก</a>
+                <a href="#product" class="block py-2 text-gray-700">รายละเอียดสินค้า</a>
+                <a href="#menu" class="block py-2 text-gray-700">เมนูเครื่องดื่ม</a>
+                <a href="#control" class="block py-2 text-gray-700">ควบคุมเครื่อง</a>
+                <a href="#support" class="block py-2 text-gray-700">ช่วยเหลือ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage Section -->
+    <section id="home" class="pt-20">
+        <div class="gradient-bg text-white py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-5xl font-bold mb-6">เครื่องชงค็อกเทลอัตโนมัติ</h1>
+                        <p class="text-xl mb-8 opacity-90">ชงเครื่องดื่มระดับมืออาชีพได้ง่ายๆ ด้วยเทคโนโลยี AI และระบบควบคุมอัตโนมัติ</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">สั่งซื้อเลย</button>
+                            <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition">ทดลองใช้งาน</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="cocktail-animation">
+                            <svg width="300" height="400" viewBox="0 0 300 400" class="mx-auto">
+                                <!-- Machine Body -->
+                                <rect x="50" y="100" width="200" height="250" rx="20" fill="#2D3748" stroke="#4A5568" stroke-width="2"/>
+                                <!-- Screen -->
+                                <rect x="70" y="120" width="160" height="100" rx="10" fill="#1A202C"/>
+                                <rect x="80" y="130" width="140" height="80" rx="5" fill="#4299E1"/>
+                                <!-- Buttons -->
+                                <circle cx="100" cy="250" r="15" fill="#48BB78"/>
+                                <circle cx="150" cy="250" r="15" fill="#ED8936"/>
+                                <circle cx="200" cy="250" r="15" fill="#E53E3E"/>
+                                <!-- Dispenser -->
+                                <rect x="130" y="280" width="40" height="60" rx="5" fill="#718096"/>
+                                <!-- Glass -->
+                                <path d="M 120 340 L 180 340 L 175 380 L 125 380 Z" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="2"/>
+                                <!-- Liquid -->
+                                <path d="M 125 375 L 175 375 L 172 378 L 128 378 Z" fill="#F56565"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">จุดเด่นของเครื่อง</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">🤖</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">เทคโนโลยี AI</h3>
+                        <p class="text-gray-600">ระบบ AI ช่วยแนะนำเครื่องดื่มตามรสนิยมและโอกาส พร้อมปรับสูตรให้เหมาะสม</p>
+                    </div>
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">⚡</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">ชงเร็ว แม่นยำ</h3>
+                        <p class="text-gray-600">ชงเครื่องดื่มได้ภายใน 30 วินาที ด้วยความแม่นยำระดับมิลลิลิตร</p>
+                    </div>
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">📱</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">ควบคุมผ่านแอป</h3>
+                        <p class="text-gray-600">สั่งชงผ่านมือถือ ตั้งค่าส่วนตัว และติดตามสถานะเครื่องได้ทุกที่</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section id="product" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">รายละเอียดสินค้า</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="machine-rotate mb-8">
+                            <svg width="400" height="300" viewBox="0 0 400 300" class="mx-auto">
+                                <!-- Detailed Machine Illustration -->
+                                <rect x="100" y="50" width="200" height="200" rx="15" fill="#2D3748"/>
+                                <rect x="110" y="60" width="180" height="80" rx="10" fill="#1A202C"/>
+                                <rect x="120" y="70" width="160" height="60" rx="5" fill="#4299E1"/>
+                                <text x="200" y="105" text-anchor="middle" fill="white" font-size="12">CocktailMaster</text>
+                                <!-- Control Panel -->
+                                <rect x="110" y="150" width="180" height="90" rx="5" fill="#4A5568"/>
+                                <circle cx="140" cy="175" r="12" fill="#48BB78"/>
+                                <circle cx="170" cy="175" r="12" fill="#ED8936"/>
+                                <circle cx="200" cy="175" r="12" fill="#E53E3E"/>
+                                <circle cx="230" cy="175" r="12" fill="#4299E1"/>
+                                <circle cx="260" cy="175" r="12" fill="#9F7AEA"/>
+                                <!-- Ingredient Containers -->
+                                <rect x="80" y="30" width="20" height="40" rx="3" fill="#F56565"/>
+                                <rect x="300" y="30" width="20" height="40" rx="3" fill="#48BB78"/>
+                                <rect x="80" y="260" width="20" height="40" rx="3" fill="#4299E1"/>
+                                <rect x="300" y="260" width="20" height="40" rx="3" fill="#ED8936"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-600">สเปคเครื่อง</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div><strong>ขนาด:</strong> 40 x 30 x 50 ซม.</div>
+                            <div><strong>น้ำหนัก:</strong> 15 กก.</div>
+                            <div><strong>ความจุ:</strong> 8 ลิตร</div>
+                            <div><strong>จำนวนส่วนผสม:</strong> 12 ชนิด</div>
+                            <div><strong>ความเร็วชง:</strong> 30 วินาที</div>
+                            <div><strong>การเชื่อมต่อ:</strong> Wi-Fi, Bluetooth</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-600">ฟังก์ชันหลัก</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ชงค็อกเทลอัตโนมัติ 100+ สูตร</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ปรับความหวาน เปรียว เย็น ได้</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ระบบทำความสะอาดอัตโนมัติ</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> แจ้งเตือนเติมส่วนผสม</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> บันทึกสูตรส่วนตัว</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-600">ความปลอดภัย</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">🛡️</span> วัสดุ Food Grade ทั้งหมด</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">🛡️</span> ระบบป้องกันการรั่วไหล</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">🛡️</span> เซ็นเซอร์ตรวจจับความผิดปกติ</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">🛡️</span> ปิดอัตโนมัติเมื่อไม่ใช้งาน</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">เมนูเครื่องดื่ม</h2>
+            
+            <!-- Menu Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="menu-filter active-tab px-6 py-2 rounded-full font-medium" data-category="all">ทั้งหมด</button>
+                <button class="menu-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300" data-category="cocktail">ค็อกเทล</button>
+                <button class="menu-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300" data-category="mocktail">ม็อกเทล</button>
+                <button class="menu-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300" data-category="popular">ยอดนิยม</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-md mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" placeholder="ค้นหาเครื่องดื่ม..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <span class="absolute left-4 top-3.5 text-gray-400">🔍</span>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="menuGrid">
+                <!-- Cocktail Items -->
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="cocktail popular">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+                        <span class="text-6xl">🍹</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cosmopolitan</h3>
+                        <p class="text-gray-600 mb-4">วอดก้า, ครานเบอร์รี่, ไลม์, ทริปเปิลเซค</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.8</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="cocktail">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
+                        <span class="text-6xl">🍸</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Blue Lagoon</h3>
+                        <p class="text-gray-600 mb-4">วอดก้า, บลูคูราเซา, เลมอนเนด</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.6</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="mocktail popular">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
+                        <span class="text-6xl">🥤</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Virgin Mojito</h3>
+                        <p class="text-gray-600 mb-4">มิ้นต์, ไลม์, น้ำตาล, โซดา</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.9</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="mocktail">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <span class="text-6xl">🧃</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sunrise Punch</h3>
+                        <p class="text-gray-600 mb-4">น้ำส้ม, น้ำสับปะรด, เกรนาดีน</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.7</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="cocktail popular">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <span class="text-6xl">🍊</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Margarita</h3>
+                        <p class="text-gray-600 mb-4">เทกีล่า, ไลม์, ทริปเปิลเซค</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.8</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-category="mocktail">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <span class="text-6xl">🍇</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Berry Blast</h3>
+                        <p class="text-gray-600 mb-4">เบอร์รี่รวม, น้ำมะนาว, โซดา</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">⭐ 4.5</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">สั่งชง</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Recipe Section -->
+            <div class="mt-16 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-semibold mb-4">สร้างสูตรของคุณเอง</h3>
+                <p class="text-gray-600 mb-6">ปรับแต่งส่วนผสมและสร้างเครื่องดื่มที่เป็นเอกลักษณ์ของคุณ</p>
+                <button class="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">เริ่มสร้างสูตร</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Control Panel Section -->
+    <section id="control" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">ระบบควบคุมเครื่อง</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Machine Status -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">สถานะเครื่อง</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span>สถานะ:</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">พร้อมใช้งาน</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>อุณหภูมิ:</span>
+                            <span class="text-blue-600 font-semibold">22°C</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>การเชื่อมต่อ:</span>
+                            <span class="text-green-600">🟢 เชื่อมต่อแล้ว</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>การใช้งานวันนี้:</span>
+                            <span class="text-purple-600 font-semibold">12 แก้ว</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Order -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">สั่งชงด่วน</h3>
+                    <div class="space-y-4">
+                        <button class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">🍹 Cosmopolitan</button>
+                        <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">🥤 Virgin Mojito</button>
+                        <button class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition">🍊 Margarita</button>
+                        <button class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition">🍸 Blue Lagoon</button>
+                    </div>
+                </div>
+
+                <!-- Ingredient Levels -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">ระดับส่วนผสม</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">วอดก้า</span>
+                                <span class="text-sm text-green-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">ครานเบอร์รี่</span>
+                                <span class="text-sm text-yellow-600">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">ไลม์</span>
+                                <span class="text-sm text-red-600">15%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">โซดา</span>
+                                <span class="text-sm text-green-600">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full mt-4 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">สั่งซื้อส่วนผสม</button>
+                </div>
+            </div>
+
+            <!-- Custom Order Panel -->
+            <div class="mt-12 bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-purple-600 text-center">สั่งชงแบบกำหนดเอง</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">เลือกเครื่องดื่ม</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option>Cosmopolitan</option>
+                            <option>Virgin Mojito</option>
+                            <option>Margarita</option>
+                            <option>Blue Lagoon</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">ขนาด</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option>เล็ก (200ml)</option>
+                            <option>กลาง (300ml)</option>
+                            <option>ใหญ่ (400ml)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">ความหวาน</label>
+                        <input type="range" min="0" max="100" value="50" class="w-full">
+                        <div class="flex justify-between text-xs text-gray-500">
+                            <span>น้อย</span>
+                            <span>ปกติ</span>
+                            <span>หวาน</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">ความเย็น</label>
+                        <input type="range" min="0" max="100" value="70" class="w-full">
+                        <div class="flex justify-between text-xs text-gray-500">
+                            <span>ปกติ</span>
+                            <span>เย็น</span>
+                            <span>เย็นมาก</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition">เริ่มชง 🍹</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">ช่วยเหลือและสนับสนุน</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- FAQ -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-600">คำถามที่พบบ่อย</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <button class="w-full text-left font-medium flex justify-between items-center" onclick="toggleFAQ(1)">
+                                <span>เครื่องชงได้กี่แก้วต่อวัน?</span>
+                                <span id="faq-icon-1">+</span>
+                            </button>
+                            <div id="faq-content-1" class="hidden mt-3 text-gray-600">
+                                เครื่องสามารถชงได้สูงสุด 200 แก้วต่อวัน ขึ้นอยู่กับขนาดและความซับซ้อนของเครื่องดื่ม
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <button class="w-full text-left font-medium flex justify-between items-center" onclick="toggleFAQ(2)">
+                                <span>ต้องทำความสะอาดบ่อยแค่ไหน?</span>
+                                <span id="faq-icon-2">+</span>
+                            </button>
+                            <div id="faq-content-2" class="hidden mt-3 text-gray-600">
+                                เครื่องจะทำความสะอาดอัตโนมัติหลังการใช้งานแต่ละครั้ง และควรทำความสะอาดลึกสัปดาห์ละครั้ง
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <button class="w-full text-left font-medium flex justify-between items-center" onclick="toggleFAQ(3)">
+                                <span>สามารถเพิ่มส่วนผสมใหม่ได้หรือไม่?</span>
+                                <span id="faq-icon-3">+</span>
+                            </button>
+                            <div id="faq-content-3" class="hidden mt-3 text-gray-600">
+                                ได้ครับ เครื่องรองรับส่วนผสมได้สูงสุด 12 ชนิด และสามารถเปลี่ยนได้ตามต้องการ
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <button class="w-full text-left font-medium flex justify-between items-center" onclick="toggleFAQ(4)">
+                                <span>รับประกันนานแค่ไหน?</span>
+                                <span id="faq-icon-4">+</span>
+                            </button>
+                            <div id="faq-content-4" class="hidden mt-3 text-gray-600">
+                                รับประกันเครื่อง 2 ปี และบริการหลังการขาย 5 ปี พร้อมอะไหล่และการซ่อมแซม
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Support -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-600">ติดต่อเรา</h3>
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3 flex items-center">
+                                <span class="mr-2">💬</span> แชทสด
+                            </h4>
+                            <p class="text-gray-600 mb-4">พูดคุยกับทีมสนับสนุนได้ตลอด 24 ชั่วโมง</p>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">เริ่มแชท</button>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3 flex items-center">
+                                <span class="mr-2">📞</span> โทรศัพท์
+                            </h4>
+                            <p class="text-gray-600 mb-2">02-xxx-xxxx</p>
+                            <p class="text-sm text-gray-500">จันทร์-ศุกร์ 9:00-18:00 น.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3 flex items-center">
+                                <span class="mr-2">📧</span> อีเมล
+                            </h4>
+                            <p class="text-gray-600 mb-4">support@cocktailmaster.com</p>
+                            <p class="text-sm text-gray-500">ตอบกลับภายใน 24 ชั่วโมง</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3 flex items-center">
+                                <span class="mr-2">🔧</span> แจ้งซ่อม
+                            </h4>
+                            <p class="text-gray-600 mb-4">แจ้งปัญหาและนัดหมายช่างซ่อม</p>
+                            <button class="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition">แจ้งซ่อม</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Download Manual -->
+                    <div class="mt-8 bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-semibold mb-3">📖 คู่มือการใช้งาน</h4>
+                        <p class="text-gray-600 mb-4">ดาวน์โหลดคู่มือฉบับเต็มและวิดีโอสาธิต</p>
+                        <div class="flex gap-3">
+                            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-sm">PDF Manual</button>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">Video Guide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">รีวิวจากลูกค้า</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-semibold">สม</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">คุณสมชาย</h4>
+                            <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"เครื่องใช้ง่ายมาก ชงได้อร่อยเหมือนบาร์เทนเดอร์มืออาชีพ ลูกค้าที่บ้านประทับใจทุกคน"</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-semibold">นิ</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">คุณนิภา</h4>
+                            <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"ดีไซน์สวย ทำความสะอาดง่าย แอปควบคุมใช้สะดวก คุ้มค่าเงินที่จ่ายไปมาก"</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-green-600 font-semibold">ปร</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">คุณประยุทธ</h4>
+                            <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"ใช้มา 6 เดือนแล้ว ไม่เคยมีปัญหา บริการหลังการขายดีเยี่ยม แนะนำเลยครับ"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">🍸</span>
+                        </div>
+                        <span class="text-xl font-bold">CocktailMaster Pro</span>
+                    </div>
+                    <p class="text-gray-400">เครื่องชงค็อกเทลอัตโนมัติที่ดีที่สุด สำหรับบ้านและธุรกิจ</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">ผลิตภัณฑ์</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">เครื่องชงค็อกเทล</a></li>
+                        <li><a href="#" class="hover:text-white">อุปกรณ์เสริม</a></li>
+                        <li><a href="#" class="hover:text-white">ส่วนผสม</a></li>
+                        <li><a href="#" class="hover:text-white">แก้วและอุปกรณ์</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">บริการ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">ติดตั้งและตั้งค่า</a></li>
+                        <li><a href="#" class="hover:text-white">บำรุงรักษา</a></li>
+                        <li><a href="#" class="hover:text-white">ซ่อมแซม</a></li>
+                        <li><a href="#" class="hover:text-white">อบรมการใช้งาน</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">ติดตาม</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">📘</a>
+                        <a href="#" class="text-gray-400 hover:text-white">📷</a>
+                        <a href="#" class="text-gray-400 hover:text-white">🐦</a>
+                        <a href="#" class="text-gray-400 hover:text-white">📺</a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">📞 02-xxx-xxxx</p>
+                        <p class="text-gray-400 text-sm">📧 info@cocktailmaster.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CocktailMaster Pro. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Menu Filter
+        document.querySelectorAll('.menu-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.menu-filter').forEach(btn => {
+                    btn.classList.remove('active-tab');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active-tab');
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                const category = this.getAttribute('data-category');
+                const menuItems = document.querySelectorAll('.menu-item');
+                
+                menuItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '-';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        // Search Functionality
+        document.querySelector('input[placeholder="ค้นหาเครื่องดื่ม..."]').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Order buttons functionality
+        document.querySelectorAll('button:contains("สั่งชง")').forEach(button => {
+            button.addEventListener('click', function() {
+                const drinkName = this.closest('.menu-item').querySelector('h3').textContent;
+                alert(`กำลังเตรียมชง ${drinkName} ให้คุณ! 🍹`);
+            });
+        });
+
+        // Quick order buttons
+        document.querySelectorAll('#control button[class*="bg-red-500"], #control button[class*="bg-blue-500"], #control button[class*="bg-orange-500"], #control button[class*="bg-purple-500"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const drinkName = this.textContent.split(' ').slice(1).join(' ');
+                alert(`กำลังเตรียมชง ${drinkName} ให้คุณ! กรุณารอสักครู่...`);
+                
+                // Simulate brewing process
+                this.textContent = '⏳ กำลังชง...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = '✅ เสร็จแล้ว!';
+                    setTimeout(() => {
+                        this.textContent = `🍹 ${drinkName}`;
+                        this.disabled = false;
+                    }, 2000);
+                }, 3000);
+            });
+        });
+
+        // Custom brew button
+        document.querySelector('button:contains("เริ่มชง 🍹")').addEventListener('click', function() {
+            const drink = document.querySelector('select').value;
+            const size = document.querySelectorAll('select')[1].value;
+            
+            alert(`กำลังเตรียมชง ${drink} ขนาด${size} ตามที่คุณกำหนด! 🍹`);
+            
+            this.textContent = '⏳ กำลังชง...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                this.textContent = '✅ เสร็จแล้ว!';
+                setTimeout(() => {
+                    this.textContent = 'เริ่มชง 🍹';
+                    this.disabled = false;
+                }, 2000);
+            }, 5000);
+        });
+
+        // Navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-purple-600');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-purple-600');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96d7eba500eb407f',t:'MTc1NDkxNzI3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-<!DOCTYPE html>
